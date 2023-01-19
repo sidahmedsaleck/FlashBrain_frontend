@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.1.96/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css" rel="stylesheet" />
+
+
+    <title>FlashBrain.ai</title>
+  </head>
+  <body>
+
+    <h1>FlashBrain.ai</h1>
+      <p>
+        Use <strong>AI</strong> generated flash card to learn any subject you
+        want.
+      </p>
+
+    <div class="home">
+      
+      <form action="" class="grid">
+        <p>Search out your subject</p>
+
+        <input
+          id="subject"
+          type="text"
+          required
+          pattern="[ a-zA-Z ]+"
+          placeholder="Enter your subject"
+        />
+        <input
+          id="nbr"
+          type="number"
+          required
+          min="1"
+          max="10"
+          placeholder="Enter the number of questions"
+        />
+        <input id="btn" type="button" value="Search" />
+      </form>
+    </div>
+
+    <!-- --------------- -->
+    
+    <div class="flashcards">
+    <div class="Card">
+
+        <div class="card_inner">
+
+            <div class="card__face question-face">
+
+                <div class="question_container">
+                    <h2 class="question"></h2>
+                </div>
+                <div class="icons">
+                    <span id="rotate-to-question" class="mdi mdi-rotate-3d-variant"></span>
+                    <span class="mdi mdi-arrow-right-top-bold"></span>
+                </div>
+            </div>
+
+            <div class="card__face answer-face">
+                <div class="answer_container">
+                    <h2 class="answer"></h2>
+                </div>
+                <div class="icons">
+                    <span id="rotate-to-question" class="mdi mdi-rotate-3d-variant"></span>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <input class="regenerate" type="text" readonly value="Try Again" />
+    </div>
+   <!-- -------------------  -->
+    <div class="loading">
+        <i class="circle notch icon huge loading"></i>
+    </div>
+
+  </body>
+</html>
+
+
+<!-- /// Sidi Ahmed Hodu  //// -->

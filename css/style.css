@@ -1,0 +1,295 @@
+
+body {
+    background-color: #F7F7F7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #967AE3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ /* ------------- header ------------- */
+
+h1 {
+
+    margin-top: 50px;
+    text-align: center;
+    font-size: 4em;
+    margin-bottom: 10px;
+    color: #967AE3;
+    font-style:oblique;
+}
+
+p {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 30px;
+    color: #967AE3;
+}
+
+
+
+/* ------------- Home page ------------- */
+
+form > p {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    color: #967AE3;
+    font-weight: bold;
+}
+
+
+form {
+    margin-top: 100px;
+    background-color: #F7F7F7;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    height: 250px;
+    box-shadow: 5px 5px 30px rgb(198, 198, 198)
+    
+}
+
+form input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 2px solid #967AE3;
+    border-radius: 3px;
+
+}
+
+
+form > input[type="button"] {
+    border: none;
+    background-color: #7AE3B3;
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: 100ms;
+
+}
+
+input:focus {
+    outline: none;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border: 2px solid #ff3e48;
+}
+
+input:valid:not(:placeholder-shown) {
+    border: 2px solid #7AE3B3;
+}
+
+form > input[type="button"]:hover {
+    cursor: pointer;
+}
+
+form > input[type="button"]:active {
+    background-color: #59ab86;
+    transform: translateY(2px);
+}
+
+
+
+
+
+/* ------------- Flashcards page ------------- */
+
+.Card {
+    margin: 100px auto 0;
+    width: 400px;
+    height: 250px;
+    perspective: 1500px;
+}
+
+
+.card_inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    position: relative;
+    background-color: #F7F7F7;
+}
+
+
+.card_inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px rgb(198, 198, 198);
+}
+
+.question-face {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.question_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    transition: 20ms;
+}
+
+.question_container > .question {
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 200;
+    overflow: scroll;
+    transition: 200ms;
+    
+}
+
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.icons > span {
+    color: #7AE3B3;
+    font-size: 1.5em;
+    font-weight: 1.5e,;
+}
+
+.icons > span:hover {
+    cursor: pointer;
+}
+
+.icons > span:active {
+    transform: translateY(2px);
+}
+
+
+
+.answer-face {
+    background-color: #967AE3;
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+  
+
+.answer_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    color: #F7F7F7;
+}
+
+.answer_container > .answer {
+    font-size: 1.2em;
+    font-weight: 200;
+    text-align: center;
+    overflow: scroll;
+}
+
+
+.question__trans {
+    transform: translateX(-500px);
+}
+
+
+
+.regenerate {
+    display: block;
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    margin-top: 100px;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background-color: #7AE3B3;
+    color: #F7F7F7;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.regenerate:hover {
+    cursor: pointer;
+}
+
+.regenerate:active {
+    background-color: #59ab86;
+    transform: translateY(2px);
+}
+
+
+
+
+/* ------------- loading page ------------- */
+
+
+.loading {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    margin-top: 150px;
+    font-size: 0.6em;
+    text-align: center;
+    color: #7AE3B3;
+}
+
+
+/* -------------  the initial display   ------------- */
+
+.home {
+    display: block;
+}
+
+.flashcards {
+    display: none;
+}
+
+.loading {
+    display: none;
+}
+
+
+
+
+/* /// Sidi Ahmed Hodu  //// */
+
+
+
