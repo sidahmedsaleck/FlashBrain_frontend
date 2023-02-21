@@ -127,7 +127,7 @@ function inputValidation(sub,nbr)
 async function makeRequest(subjectValue,nbrValue)
 {
     console.log('making request');
-    const response = await axios.post(`https://flashbrainapi-production.up.railway.app/`, null ,{ params:{subject:subjectValue , nbr:nbrValue}} )
+    const response = await axios.post(`https://flashbrainapi-production.up.railway.app/api/flashcards`, null ,{ params:{subject:subjectValue , nbr:nbrValue}} )
     const data = await response.data;
     console.log(data);
     return data.flashCards;
